@@ -28,6 +28,7 @@ in the source distribution for its full text.
 #define COLORSCHEME_BLACKONWHITE2 3
 #define COLORSCHEME_MIDNIGHT 4
 #define COLORSCHEME_BLACKNIGHT 5
+#define COLORSCHEME_TANGO 6
 
 #define Black COLOR_BLACK
 #define Red COLOR_RED
@@ -529,6 +530,67 @@ void CRT_setColors(int colorScheme) {
       CRT_colors[CPU_SOFTIRQ] = ColorPair(Blue,Black);
       CRT_colors[CPU_STEAL] = ColorPair(Cyan,Black);
       CRT_colors[CPU_GUEST] = ColorPair(Cyan,Black);
+   } else if (CRT_colorScheme == COLORSCHEME_TANGO) {
+      CRT_colors[RESET_COLOR] = A_BOLD | ColorPair(Black,Black);
+      CRT_colors[DEFAULT_COLOR] = A_BOLD | ColorPair(Black,Black);
+      CRT_colors[FUNCTION_BAR] = ColorPair(Black,White);
+      CRT_colors[FUNCTION_KEY] = ColorPair(Blue,White);
+      CRT_colors[PANEL_HEADER_FOCUS] = ColorPair(Blue,White);
+      CRT_colors[PANEL_HEADER_UNFOCUS] = ColorPair(Black,White);
+      CRT_colors[PANEL_HIGHLIGHT_FOCUS] = ColorPair(Black,White);
+      CRT_colors[PANEL_HIGHLIGHT_UNFOCUS] = A_BOLD | ColorPair(White,Black);
+      CRT_colors[FAILED_SEARCH] = ColorPair(Red,White);
+      CRT_colors[UPTIME] = A_BOLD | ColorPair(Green,Black);
+      CRT_colors[BATTERY] = A_BOLD | ColorPair(Green,Black);
+      CRT_colors[LARGE_NUMBER] = A_BOLD | ColorPair(Red,Black);
+      CRT_colors[METER_TEXT] = ColorPair(White,Black);
+      CRT_colors[METER_VALUE] = A_BOLD | ColorPair(Green,Black);
+      CRT_colors[LED_COLOR] = ColorPair(Green,Black);
+      CRT_colors[TASKS_RUNNING] = A_BOLD | ColorPair(Green,Black);
+      CRT_colors[PROCESS] = A_NORMAL;
+      CRT_colors[PROCESS_SHADOW] = ColorPair(White,Black);
+      CRT_colors[PROCESS_TAG] = A_BOLD | ColorPair(Green,Black);
+      CRT_colors[PROCESS_MEGABYTES] = ColorPair(Green,Black);
+      CRT_colors[PROCESS_BASENAME] = A_BOLD | ColorPair(White,Black);
+      CRT_colors[PROCESS_TREE] = ColorPair(Green,Black);
+      CRT_colors[PROCESS_R_STATE] = ColorPair(Green,Black);
+      CRT_colors[PROCESS_HIGH_PRIORITY] = ColorPair(Red,Black);
+      CRT_colors[PROCESS_LOW_PRIORITY] = ColorPair(Red,Black);
+      CRT_colors[PROCESS_THREAD] = A_BOLD | ColorPair(Blue,Black);
+      CRT_colors[PROCESS_THREAD_BASENAME] = A_BOLD | ColorPair(White,Black);
+      CRT_colors[BAR_BORDER] = A_BOLD;
+      CRT_colors[BAR_SHADOW] = ColorPair(White,Black);
+      CRT_colors[SWAP] = ColorPair(Red,Black);
+      CRT_colors[GRAPH_1] = A_BOLD | ColorPair(Red,Black);
+      CRT_colors[GRAPH_2] = ColorPair(Red,Black);
+      CRT_colors[GRAPH_3] = A_BOLD | ColorPair(Green,Black);
+      CRT_colors[GRAPH_4] = A_BOLD | ColorPair(Green,Black);
+      CRT_colors[GRAPH_5] = ColorPair(Green,Black);
+      CRT_colors[GRAPH_6] = ColorPair(Green,Black);
+      CRT_colors[GRAPH_7] = A_BOLD | ColorPair(Blue,Black);
+      CRT_colors[GRAPH_8] = ColorPair(Blue,Black);
+      CRT_colors[GRAPH_9] = ColorPair(White,Black);
+      CRT_colors[MEMORY_USED] = A_BOLD | ColorPair(Yellow,Black);
+      CRT_colors[MEMORY_BUFFERS] = A_BOLD | ColorPair(Blue,Black);
+      CRT_colors[MEMORY_CACHE] = A_BOLD | ColorPair(Black,Black);
+      CRT_colors[LOAD_AVERAGE_FIFTEEN] = ColorPair(White,Black);
+      CRT_colors[LOAD_AVERAGE_FIVE] = A_NORMAL;
+      CRT_colors[LOAD_AVERAGE_ONE] = A_BOLD;
+      CRT_colors[LOAD] = A_BOLD;
+      CRT_colors[HELP_BOLD] = A_BOLD | ColorPair(Green,Black);
+      CRT_colors[CLOCK] = A_BOLD;
+      CRT_colors[CHECK_BOX] = ColorPair(Green,Black);
+      CRT_colors[CHECK_MARK] = A_BOLD;
+      CRT_colors[CHECK_TEXT] = A_NORMAL;
+      CRT_colors[HOSTNAME] = A_BOLD;
+      CRT_colors[CPU_NICE] = A_BOLD | ColorPair(White,Black);
+      CRT_colors[CPU_NORMAL] = A_BOLD | ColorPair(Green,Black);
+      CRT_colors[CPU_KERNEL] = ColorPair(Green,Black);
+      CRT_colors[CPU_IOWAIT] = A_BOLD | ColorPair(Black, Black);
+      CRT_colors[CPU_IRQ] = ColorPair(Green,Black);
+      CRT_colors[CPU_SOFTIRQ] = ColorPair(Magenta,Black);
+      CRT_colors[CPU_STEAL] = ColorPair(Green,Black);
+      CRT_colors[CPU_GUEST] = ColorPair(Green,Black);
    } else {
       /* Default */
       CRT_colors[RESET_COLOR] = ColorPair(White,Black);
