@@ -32,6 +32,7 @@ in the source distribution for its full text.
 #define COLORSCHEME_MIDNIGHT 4
 #define COLORSCHEME_BLACKNIGHT 5
 #define COLORSCHEME_TANGO 6
+#define COLORSCHEME_TANGO2 7
 
 #define Black COLOR_BLACK
 #define Red COLOR_RED

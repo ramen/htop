@@ -120,7 +120,7 @@ static bool Settings_read(Settings* this, char* fileName) {
       } else if (String_eq(option[0], "color_scheme")) {
          this->colorScheme = atoi(option[1]);
          if (this->colorScheme < 0) this->colorScheme = 0;
-         if (this->colorScheme > 6) this->colorScheme = 6;
+         if (this->colorScheme > 7) this->colorScheme = 7;
       } else if (String_eq(option[0], "left_meters")) {
          Settings_readMeters(this, option[1], LEFT_HEADER);
          readMeters = true;
